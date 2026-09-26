@@ -429,8 +429,26 @@ h1 {
   content: "/";
 }
 
+.publication-meta span:first-child::before,
+.publication-meta .publication-rank::before {
+  margin: 0;
+  content: none;
+}
+
 .publication-meta .venue {
   color: var(--warm);
+}
+
+.publication-meta .publication-rank {
+  display: inline-flex;
+  min-height: 1.45rem;
+  align-items: center;
+  padding: 0.08rem 0.42rem;
+  border: 1px solid color-mix(in srgb, var(--accent) 55%, var(--line));
+  border-radius: 2px;
+  color: var(--accent-dark);
+  line-height: 1.35;
+  white-space: nowrap;
 }
 
 .publication-item h3 {
@@ -725,6 +743,15 @@ h1 {
 
   .publication-item h3 {
     font-size: 1.35rem;
+  }
+
+  .publication-meta {
+    gap: 0.35rem 0.65rem;
+  }
+
+  .publication-meta span::before {
+    margin: 0;
+    content: none;
   }
 
   .nowrap {
